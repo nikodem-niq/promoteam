@@ -1,4 +1,4 @@
-import home, { getStaticProps as homeGetStaticProps } from './home'
+import home, { getStaticProps as homeGetStaticProps } from './home/index'
 
 export const getStaticProps = homeGetStaticProps
 

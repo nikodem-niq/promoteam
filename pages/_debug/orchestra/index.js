@@ -5,8 +5,8 @@ const OrchestraPage = forwardRef(function OrchestraPage({}) {
   return (
     <>
       <OrchestraToggle id="studio">⚙️</OrchestraToggle>
-      <OrchestraToggle id="stats">📈</OrchestraToggle>
-      <OrchestraToggle id="grid">🌐</OrchestraToggle>
+      <OrchestraToggle id="stats">📈 (</OrchestraToggle>
+      <OrchestraToggle id="grid">🌐 (Grid)</OrchestraToggle>
       <OrchestraToggle id="dev">🚧</OrchestraToggle>
     </>
   )

@@ -1,0 +1,47 @@
+.progressBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 8px;
+  background-color: var(--theme-primary);
+  width: 100%;
+
+  .progressStatic {
+    color: var(--theme-secondary);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 8px;
+    left: 0;
+    height: 24px;
+    background-color: var(--theme-primary);
+    border: solid 2px var(--theme-secondary);
+    width: 100%;
+
+    div {
+      position: relative;
+      font-size: small;
+      font-weight: 400;
+      width: 20%;
+
+      .separator {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        width: 4px;
+        height: 12px;
+      }
+
+      p {
+        padding: 1rem;
+      }
+    }
+  }
+
+  .progress {
+    height: 100%;
+    background-color: var(--theme-secondary);
+    transition: width 0.01s ease;
+  }
+}

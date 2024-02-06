@@ -2,6 +2,7 @@ const colors = {
   black: '#000000',
   white: '#ffffff',
   green: '#00ff6a',
+  lavenda: '#C2A1FE',
 }
 
 const themes = {
