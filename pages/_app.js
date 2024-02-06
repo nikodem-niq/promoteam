@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
       <RealViewport />
       <DeviceDetectionProvider>
         <ProjectProvider
-          id="Satus"
+          id="Promoteam"
           config="/config/Satus-2023-04-17T12_55_21.json"
         >
           <RafDriverProvider id="default">

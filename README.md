@@ -1,72 +1,74 @@
-[![SATUS](https://assets.studiofreight.com/satus/header.png)](https://github.com/studio-freight/satus)
+# Promoteam
 
-## Introduction
+## Setup
 
-Satūs means start, beginning, planting, it's a set of tools we use as a template when starting a new project.
+The usual process for Next.js based apps/websites:
 
-<br/>
+1. Install node modules:
 
-## Composition
+   `$ pnpm i`
 
-This starter kit is composed of:
+2. Get the .env variables from Vercel (check `.env.template`), after [installing Vercel CLI](https://vercel.com/docs/cli):
 
-- [Next.js](https://nextjs.org)
+   `$ vc link`
+
+   `$ vc env pull`
+
+3. run development environment:
+
+   `$ pnpm dev`
+
+## Stack
+
 - [Lenis](https://github.com/studio-freight/lenis)
-- [Theatre.js](https://www.theatrejs.com/)
-- [GSAP](https://greensock.com/gsap/)
+- [Tempus](https://github.com/studio-freight/tempus)
 - [Hamo](https://github.com/studio-freight/hamo)
-- [Compono](https://github.com/studio-freight/compono)
+- [PNPM](https://pnpm.io/)
+- [Next.js](https://nextjs.org/)
+- [Three.js](https://threejs.org/)
+- [@react-three/drei](https://github.com/pmndrs/drei)
+- [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+- [GSAP](https://greensock.com/gsap/)
+- [Embla Carousel](https://github.com/davidcetinkaya/embla-carousel)
+- Sass (Modules)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [React Hook Form](https://react-hook-form.com/)
+- GraphQL (CMS API)
+- [Next-Sitemap](https://github.com/iamvishnusankar/next-sitemap) (postbuild script)
+- [@svgr/webpack](https://github.com/gregberge/svgr/tree/main) (SVG Imports in `next.config.js`)
 
-<br/>
+## Code Style & Linting
 
-## Features
+- Eslint ([Next](https://nextjs.org/docs/basic-features/eslint#eslint-config) and [Prettier](https://github.com/prettier/eslint-config-prettier) plugins)
+- [Prettier](https://prettier.io/) with the following settings available in `.pretierrc`:
+  ```json
+  {
+    "endOfLine": "auto",
+    "semi": false,
+    "singleQuote": true
+  }
+  ```
+- [Husky + lint-staged precommit hooks](https://github.com/okonet/lint-staged)
 
-This starter kit is composed of:
+## Third Party
 
-- SVG import through [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack)
-- Sass architecture and tooling:
-  - Config file
-  - Viewport based sizes
-  - Reset
-  - Easings
-  - Themes
-- Debug tools:
-  - Theatre.js Studio
-  - FPS Meter
-  - Grid Debugger
-- Github workflow to display lighthouse report on slack:
-  make sure you update the `vercel_project_id` in `.github/workflows/lighthouse-on-vercel-preview-url.yml` to your Vercel project id.
+- [Mailchimp CRM](https://mailchimp.com/)
+- [Hubspot CRM](https://hubspot.com/)
+- [Vercel (Hosting & Continuous Deployment)](https://vercel.com/home)
+- [GitHub Versioning](https://github.com/)
 
-<br/>
+## Folder Structure
 
-## Debug
+Alongside the usual Next.js folder structure (`/public`, `/pages`, etc.) We've added a few other folders to keep the code easier to read:
 
-To toggle debug modes you need to access the page `/_debug/orchestra`.
+- **/assets:** General Images/Videos and SVGs
+- **/components:** Reusable components with their respective Sass file
+- **/config:** General settings (mostly Leva for now)
+- **/hooks:** Reusable Custom Hooks
+- **/layouts:** High level layout component
+- **/lib:** Reusable Scripts and State Store
+- **/styles:** Global styles and Sass partials
 
-example: `https://satus.studiofreight.com/_debug/orchestra`
+## Credits
 
-## Flavors
-
-- [Light](https://github.com/studio-freight/satus) (you're here)
-- [With Shopify](https://github.com/studio-freight/satus/tree/with-shopify)
-- [With Tina-cms](https://github.com/studio-freight/satus/tree/with-tina-cms)
-- [With Storyblok](https://github.com/studio-freight/satus/tree/with-storyblok)
-- [With react-three-fiber](https://github.com/studio-freight/satus/tree/with-r3f)
-- [With OGL](https://github.com/studio-freight/satus/tree/with-ogl)
-
-<br/>
-
-## Authors
-
-This toolkit is curated and maintained by the Studio Freight Things team:
-
-- Clement Roche ([@clementroche\_](https://twitter.com/clementroche_)) – [Studio Freight](https://studiofreight.com)
-- Guido Fier ([@uido15](https://twitter.com/uido15)) – [Studio Freight](https://studiofreight.com)
-- Leandro Soengas ([@lsoengas](https://twitter.com/lsoengas)) - [Studio Freight](https://studiofreight.com)
-- Franco Arza ([@arzafran](https://twitter.com/arzafran)) - [Studio Freight](https://studiofreight.com)
-
-<br/>
-
-## License
-
-[The MIT License.](https://opensource.org/licenses/MIT)
+Built using Satus starter boilerplate
