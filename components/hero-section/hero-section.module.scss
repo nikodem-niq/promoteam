@@ -1,5 +1,50 @@
+$headerFontSize: 14vw;
+
 .heroSection {
-  padding: 10rem;
   height: 100vh;
   width: auto;
+
+  .hero {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .heroHeader {
+      display: flex;
+      font-weight: 700;
+      height: auto;
+      font-size: $headerFontSize;
+      width: 100%;
+      white-space: nowrap;
+      align-items: start;
+      overflow: hidden;
+
+      .secondHeader {
+        color: black;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+      }
+
+      .redDot {
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100%;
+        background-color: #d12d38;
+        animation: blink 1.3s infinite;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

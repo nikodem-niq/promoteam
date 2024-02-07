@@ -3,6 +3,7 @@ const colors = {
   white: '#ffffff',
   green: '#00ff6a',
   lavenda: '#C2A1FE',
+  red: '#D12D38',
 }
 
 const themes = {
@@ -14,7 +15,7 @@ const themes = {
   dark: {
     primary: colors.black,
     secondary: colors.white,
-    contrast: colors.green,
+    contrast: colors.red,
   },
 }
 

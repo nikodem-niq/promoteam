@@ -7,12 +7,12 @@ export const Header = forwardRef((_, ref) => {
   return (
     <header className={s.header} ref={ref}>
       <div className={cn('layout-block', s.head)}>
-        <div>
+        <div className={cn(s.headerSectionLeft, s.headerSection)}>
           <Link href="/_debug/orchestra" target="_blank" className="link">
             promoteam
           </Link>
         </div>
-        <div className="header-section">
+        <div className={cn(s.headerSectionMain, s.headerSection)}>
           <Link href="/_debug/orchestra" target="_blank" className="link">
             strona główna
           </Link>
@@ -26,7 +26,7 @@ export const Header = forwardRef((_, ref) => {
             kontakt
           </Link>
         </div>
-        <div className="header-section">
+        <div className={cn(s.headerSectionRight, s.headerSection)}>
           <Link href="/_debug/orchestra" target="_blank" className="link">
             email
           </Link>

@@ -1,25 +1,43 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
-  // color: var(--white);
+  z-index: 99;
+  height: auto;
+  background-color: var(--theme-primary);
   color: var(--theme-secondary);
   padding: mobile-vw(20px) 0;
 
   @include desktop {
-    padding: desktop-vw(40px) 0;
+    padding: desktop-vw(20px) 0;
   }
 
   .head {
     display: flex;
-    justify-content: space-between;
     position: relative;
     z-index: 2;
   }
 
-  .header-section {
+  .headerSectionMain {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .headerSectionRight,
+  .headerSectionLeft {
+    width: 25%;
+  }
+
+  .headerSectionLeft {
+    justify-content: start;
+  }
+
+  .headerSectionRight {
+    justify-content: end;
+  }
+
+  .headerSection {
     display: flex;
   }
   a {
